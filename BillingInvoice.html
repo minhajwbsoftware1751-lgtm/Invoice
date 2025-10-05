@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> </title>
+    <!-- <meta charset="UTF-8"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            background: #fff;
+        }
+
+        .invoice {
+            max-width: 900px;
+            margin: auto;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+        }
+
+        .headerleft {
+            width: 190px;
+            height: 15px;
+            padding-left: 5px;
+            border: 2px solid rgb(0, 0, 0);
+            margin-bottom: 5px;
+
+        }
+
+        .headerright {
+            width: 190px;
+            height: 15px;
+            padding-left: 5px;
+            border: 2px solid rgb(0, 0, 0);
+            margin-bottom: 5px;
+            text-align: center;
+
+
+        }
+
+        .headerright2 {
+            width: 190px;
+            height: 15px;
+            padding-left: 5px;
+            border: 2px solid rgb(255, 255, 255);
+            margin-bottom: 5px;
+            text-align: center;
+
+
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        .title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .details table {
+            border-collapse: collapse;
+            width: 48%;
+        }
+
+        .details td {
+            padding: 3px 0;
+        }
+
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .product-table th,
+        .product-table td {
+            border: 1px solid #000;
+            padding: 6px;
+            vertical-align: top;
+        }
+
+        .product-table th {
+            background: #f2f2f2;
+            text-align: center;
+        }
+
+        .product-table td:nth-child(1) {
+            text-align: center;
+            width: 40px;
+        }
+
+        .product-table td:nth-child(2) {
+            width: 400px;
+        }
+
+        .product-table td:nth-child(3) {
+            text-align: center;
+        }
+
+        .product-table td:nth-child(4) {
+            text-align: center;
+            width: 100px;
+
+        }
+
+        .product-table td:nth-child(5) {
+            text-align: right;
+        }
+
+
+
+        .product-table .no-border-bottom th:first-child {
+            border-bottom: none !important;
+        }
+
+
+        .product-table .no-border th {
+            border-top: none !important;
+            border-bottom: none !important;
+            text-align: center;
+        }
+
+        .td {
+            height: 400px;
+        }
+
+        .th {
+            height: 100px;
+        }
+
+        .box {
+            width: 380px;
+            height: 100px;
+            border: 1px solid rgb(0, 0, 0);
+            margin-top: 5px;
+            border-collapse: collapse;
+        }
+
+        .box th,
+        .box td {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .note {
+            font-size: 14px;
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+
+        }
+
+        .cardpay {
+            border-right: none;
+        }
+
+        .image {
+            width: 200px;
+            height: 30px;
+        }
+
+
+
+        .footer-signature {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .footer-signature div {
+            width: 27%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice">
+        <div class="logo">
+            <img src="https://wbsoftwares.com/img/logo.4b604ac6.png" alt="alternatetext">
+        </div>
+        <!-- Header -->
+        <div class="header">
+
+            <div>
+                <div class="headerleft">Mushak 6.3</div>
+                <div class="headerleft">BIN:003629394-0101</div>
+            </div>
+            <div>
+                <h1>Invoice/Bill</h1>
+            </div>
+            <div>
+                <div class="headerright2"></div>
+                <div class="headerright">G&G 04_Banani</div>
+            </div>
+
+        </div>
+
+        <!-- Details -->
+        <div class="details">
+            <table class="box">
+                <tr>
+                    <th>Name:</th>
+                    <th>MR.FORAZ</th>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <th>Banani, Dhaka</th>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <th>@notinterested</th>
+                </tr>
+                <tr>
+                    <th>Mob:</th>
+                    <th>01786124137</th>
+                </tr>
+            </table>
+
+
+            <table class="box">
+                <tr>
+                    <th>Cash by:</th>
+                    <th>Maruf Mia</th>
+                </tr>
+                <tr>
+                    <th>Invoice no:</th>
+                    <th>432678453876</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <img class="image"
+                            src="data:image/png;base64,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"
+                            alt="alternatetext">
+                    </th>
+                </tr>
+                <tr>
+                    <th>Date:</th>
+                    <th>21/02/2025 5.20pm</th>
+                </tr>
+
+            </table>
+        </div>
+
+
+
+        <!-- Product Table -->
+        <table class="product-table">
+            <tr>
+                <th>SL #</th>
+                <th>Product Info</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Amount in TK</th>
+            </tr>
+            <tr class="td">
+                <td>1</td>
+                <td>Product Info</td>
+                <td>1</td>
+                <td>5,299.00</td>
+                <td>5,299.00</td>
+            </tr>
+
+
+            <tr>
+                <th colspan="3"></th>
+                <th>Total Point</th>
+                <th>00.00</th>
+            </tr>
+
+            <tr class="no-border-bottom">
+                <th colspan="3">Pay Type: Card</th>
+                <th>Net Amount</th>
+                <th>5299.00</th>
+            </tr>
+
+
+            <tr class="no-border">
+                <th colspan="3">Card Pay</th>
+                <th class="cardpay"></th>
+                <th>0.00</th>
+            </tr>
+            <tr class="no-border">
+                <th colspan="3">Gift Card Pay</th>
+                <th></th>
+                <th>0.00</th>
+            </tr>
+
+            <tr>
+                <th colspan="3">Taka (In Word): Five thousand Taka</th>
+                <th>Total Paid Amount</th>
+                <th>5299.00</th>
+            </tr>
+        </table>
+
+        <table style="width:100%; border:none;">
+            <tr>
+                <td style="text-align:left; border:none; width:50%; vertical-align:down;">
+                    <h4>Received the above item in good condition.</h4>
+                </td>
+                <td style="text-align:right; border:none; width:50%; vertical-align:top;">
+                    <div
+                        style="border-top:1px solid #000; width:250px; margin-left:auto; margin-top:20px; text-align:center;">
+                        <h4>For G&G 04_Banani</h4>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="note">
+            Note: Once sold, cannot be returned, exchanged or refund
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+
+</html>

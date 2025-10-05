@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 26px;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header-left {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .header-center {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .header-center h2 {
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-center p {
+            margin: 2px 0;
+            font-size: 12px;
+        }
+
+        .header-right {
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .invoice-to {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-left: 3px dashed #000;
+            border-right: 3px dashed #000;
+            background: #f9f9f9;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        .invoice-to p {
+            margin: 5px 0;
+            padding: 0;
+        }
+
+        .invoice-to p:nth-child(odd) {
+            text-align: left;
+
+        }
+
+        .invoice-to p:nth-child(even) {
+            text-align: right;
+        }
+
+        .reference h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #000;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        th,
+        td {
+            padding: 8px 5px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        th {
+            border-bottom: 1px solid #000;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        tr:not(:last-child) td {
+            border-bottom: 1px dashed #999;
+        }
+
+        .summary {
+            width: 280px;
+            margin-left: auto;
+            font-size: 14px;
+        }
+
+        .summary tr td {
+            padding: 5px;
+        }
+
+        .summary tr td:first-child {
+            font-weight: bold;
+        }
+
+        .summary tr:last-child td {
+            border-top: 1px solid #000;
+            font-size: 15px;
+        }
+
+        .extra p {
+            margin: 3px 0;
+            font-size: 13px;
+        }
+
+        .signatures {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .signatures div {
+            text-align: center;
+            width: 40%;
+            font-size: 13px;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            border-top: 2px solid #000;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .footer p {
+            margin: 3px 0;
+        }
+
+        .footer-note {
+            font-size: 11px;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-left">
+            <div>
+                <img style="width: 70px; height: 70px;"
+                    src="https://observantbd.com/storage/uploads/idCardSettingFile/4332891752303091.png"
+                    alt="alternatetext">
+            </div>
+
+        </div>
+        <div class="header-center">
+            <h2>Ovservant Residential Public School & College</h2>
+            <p>Khansama, Dinajpur, Bangladesh</p>
+            <p>Phone: +8801306286660 | Email: orpsc15@gmail.com</p>
+        </div>
+        <div class="header-right">
+            <p><b>Invoice No:</b> 2025-001</p>
+            <p><b>Date:</b> Apr 7, 2025</p>
+        </div>
+    </div>
+
+    <h1>Invoice</h1>
+
+    <div class="invoice-to">
+        <p><b>Name:</b> MST ROWJATUN JANNAT ROWJA</p>
+        <p>Common <b>: Section</b></p>
+        <p><b>Registration No:</b> TS2025510500</p>
+        <p>General <b>: Group</b></p>
+        <p><b>Roll:</b> 01</p>
+        <p> 2025 <b>: Session Year</b></p>
+        <p><b>StudentID:</b>0000000</p>
+        <p>Three<b>: Class</b> </p>
+        
+    </div>
+
+
+    <div class="reference">
+        <h2>Reference Invoice</h2>
+        <table>
+            <tr>
+                <th>Invoice</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Actual</th>
+                <th>Fine</th>
+                <th>Waiver</th>
+                <th>Paid</th>
+                <th>Due</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>340</td>
+                <td>Evening Care Fee</td>
+                <td>01-01-2025</td>
+                <td>100.00 tk</td>
+                <td>0.00 tk</td>
+                <td>100.00 tk</td>
+                <td>0.00 tk</td>
+                <td>0.00 tk</td>
+                <td>Paid</td>
+            </tr>
+            <tr>
+                <td>327</td>
+                <td>Monthly Fee</td>
+                <td>01-12-2025</td>
+                <td>600.00 tk</td>
+                <td>0.00 tk</td>
+                <td>0.00 tk</td>
+                <td>0.00 tk</td>
+                <td>600.00 tk</td>
+                <td>Not Paid</td>
+            </tr>
+            <tr>
+                <td>327</td>
+                <td>Monthly Fee</td>
+                <td>01-12-2025</td>
+                <td>600.00 tk</td>
+                <td>0.00 tk</td>
+                <td>0.00 tk</td>
+                <td>0.00 tk</td>
+                <td>600.00 tk</td>
+                <td>Not Paid</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <table class="summary">
+        <tr>
+            <td>Net Total</td>
+            <td>11600 BDT</td>
+        </tr>
+        <tr>
+            <td>Waiver</td>
+            <td>1400</td>
+        </tr>
+        <tr>
+            <td>Fine</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Payment</td>
+            <td>8400</td>
+        </tr>
+        <tr>
+            <td>Net Due</td>
+            <td><b>1800 BDT</b></td>
+        </tr>
+    </table>
+
+    <div class="extra">
+        <p><b>Net total in number:</b> 11600 BDT</p>
+        <p><b>Net total due in number:</b> 1800 BDT</p>
+    </div>
+
+    <div class="signatures">
+        <div>Student Signature</div>
+        <div>Authority Signature</div>
+    </div>
+
+    <div class="footer">
+        <p><b>Thank you for choosing Ovservant Residential Public School & College</b></p>
+        <p class="footer-note">This invoice is system generated and does not require a physical signature.</p>
+        <p class="footer-note">Generated on: Apr 7, 2025 11:48:27 PM</p>
+    </div>
+
+
+</body>
+
+</html>

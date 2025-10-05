@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Railway e-Ticket</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background: #f6f6f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .ticket {
+            background: #fff;
+            border: 5px solid #0c8a43;
+            max-width: 850px;
+            margin: auto;
+            padding: 25px 35px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .header-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .header-left-top {
+            display: flex;
+            align-items: center;
+            gap:  200px;
+        }
+
+        .header-left-top img {
+            height: 80px;
+            width: 80px;
+        }
+
+        .header-text h1 {
+            color: #2c87ef;
+            font-size: 22px;
+            margin: 0;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        .header-text h2 {
+            font-size: 18px;
+            color: #61a9fb;
+            margin: 3px 0 5px;
+            text-align: center;
+        }
+
+        .subtext {
+            font-size: 10px;
+            color: #333;
+            margin-top:0px;
+            text-align: left;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: right;
+            flex-shrink: 0;
+            padding-left: 5px;
+
+        }
+
+        .qr {
+            width: 100px;
+            height: 100px;
+        }
+
+        .qr img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .powered {
+            font-size: 12px;
+            color: #444;
+            text-align: left;
+        }
+
+        .powered span {
+            display: block;
+            font-weight: bold;
+            color: #0c8a43;
+            font-size: 13px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            
+        }
+
+        th {
+            font-size: 20px;
+            background-color: #12e36d;
+            padding: 6px 4px;
+            border: 2px solid #00dc60;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        td {
+            padding: 6px 4px;
+            border: 1px solid #000;
+        }
+
+        td:nth-child(odd) {
+            width: 50%;
+        }
+
+        .note {
+            font-size: 13px;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .passenger {
+            margin-top: 20px;
+        }
+
+        /* Print Styles */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 5mm;
+            }
+
+            body {
+                background: #fff;
+                margin: 0;
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .ticket {
+                margin: 0;
+                padding: 15px;
+                border: 5px solid #0c8a43;
+                box-shadow: none;
+                page-break-inside: avoid;
+                font-size: 12px;
+            }
+
+            .header-left-top img {
+                height: 60px;
+                width: 60px;
+            }
+
+            .header-text h1 {
+                font-size: 18px;
+            }
+
+            .header-text h2 {
+                font-size: 14px;
+            }
+
+            .subtext {
+                font-size: 11px;
+            }
+
+            table {
+                font-size: 11px;
+                page-break-inside: avoid;
+            }
+
+            th {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ticket">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-left-top">
+                    <img src="https://images.seeklogo.com/logo-png/34/1/bangladesh-railway-logo-png_seeklogo-349823.png"
+                        alt="Railway Logo">
+                    <div class="header-text">
+                        <h1>BANGLADESH RAILWAY</h1>
+                        <h2>বাংলাদেশ রেলওয়ে</h2>
+                    </div>
+                </div>
+                <p class="subtext">
+                    Dear NAZMUL HAQUE,<br>
+                    Your request to book e-ticket for your journey in Bangladesh Railway was successful. You can travel
+                    on the train mentioned in the ticket subject to showing your NID or Photo ID card. The details of
+                    your e-ticket are as below:
+                </p>
+                <p class="subtext">
+                    বাংলাদেশ রেলওয়েতে ভ্রমণের জন্য আপনার চাহিত ই-টিকিট সফলভাবে প্রদান করা হয়েছে। আপনার এনআইডি বা ছবি
+                    সম্বলিত আইডি দেখানো সাপেক্ষে আপনি টিকিটে বর্ণিত ট্রেনে যাত্রা করতে পারবেন। ই-টিকিটের বিস্তারিত নিচে
+                    দেওয়া হল:
+                </p>
+            </div>
+
+            <div class="header-right">
+                <div class="powered">
+                    Powered by<br>
+                    <span>Shohoz<br>Synesis<br>Vincen JV</span>
+                </div>
+                <div class="qr">
+                    <img src="https://www.avasam.com/wp-content/uploads/2019/10/qr-sample.png"
+                        alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <th>Journey Information (ভ্রমণের তথ্য)</th>
+            <th></th>
+            <tr>
+                <td>Issue Date & Time (ইস্যুর তারিখ ও সময়)</td>
+                <td>21-09-2025 14:15 (রবি, ২১-সেপ্টে-২৫)</td>
+            </tr>
+            <tr>
+                <td>Journey Date & Time (যাত্রার তারিখ ও সময়)</td>
+                <td>26-09-2025 14:15 (শুক্র, ২৬-সেপ্টে-২৫)</td>
+            </tr>
+            <tr>
+                <td>Train Name & Number (ট্রেন নম্বর ও নাম)</td>
+                <td>Intercity – 757 KAPOTAKSHA EXPRESS</td>
+            </tr>
+            <tr>
+                <td>From Station (যাত্রা শুরুর স্টেশন)</td>
+                <td>Dhaka (ঢাকা)</td>
+            </tr>
+            <tr>
+                <td>To Station (গন্তব্য স্টেশন)</td>
+                <td>Chilahati (চিলাহাটি)</td>
+            </tr>
+            <tr>
+                <td>Class Name (শ্রেণীর নাম)</td>
+                <td>S_CHAIR (এস-চেয়ার)</td>
+            </tr>
+            <tr>
+                <td>Coach Name / Seat(s) (কোচ নাম / আসন)</td>
+                <td>DA-94, DA-95</td>
+            </tr>
+            <tr>
+                <td>No. of Seats (আসনের সংখ্যা)</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>No. of Adult Passenger (প্রাপ্তবয়স্ক যাত্রীর সংখ্যা)</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>No. of Child Passenger (শিশু যাত্রীর সংখ্যা)</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Fare (ভাড়া)</td>
+                <td>BDT 720.00</td>
+            </tr>
+            <tr>
+                <td>VAT (ভ্যাট)</td>
+                <td>BDT 0.00</td>
+            </tr>
+            <tr>
+                <td>Service Charge (সেবা খরচ)</td>
+                <td>BDT 40.00</td>
+            </tr>
+            <tr>
+                <td><b>Total Fare (মোট ভাড়া)</b></td>
+                <td><b>BDT 760.00</b></td>
+            </tr>
+        </table>
+
+        <div class="passenger">
+            <table>
+                <th>Passenger Information (যাত্রীর তথ্য)</th>
+                <th></th>
+                <tr>
+                    <td>Passenger Name (যাত্রীর নাম)</td>
+                    <td>NAZMUL HAQUE</td>
+                </tr>
+                <tr>
+                    <td>Identification Type (পরিচয়পত্র ধরণ)</td>
+                    <td>NID</td>
+                </tr>
+                <tr>
+                    <td>Identification Number (পরিচয়পত্র নম্বর)</td>
+                    <td>607**********97</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number (মোবাইল নম্বর)</td>
+                    <td>017********</td>
+                </tr>
+                <tr>
+                    <td>PNR Number (পিএনআর নম্বর)</td>
+                    <td>6DP74F9CZ4FY</td>
+                </tr>
+                <tr>
+                    <td>Co Passenger 1 (সহযাত্রী ১)</td>
+                    <td>ALFAZ HOSAIN</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <div>
+                <div class="note">
+                    <b>Note:</b><br>
+                    – Carrying NID or Photo ID while traveling is mandatory.<br>
+                    – Keep your printed or online e-ticket with you.<br>
+                </div>
+                <p>Wishing you a pleasant and safe journey—<br><b>Bangladesh Railway</b></p>
+            </div>
+            <div>
+                <div class="note">
+                    <b>দ্রষ্টব্য:</b><br>
+                    – যাত্রা করার সময় প্রতিটি যাত্রীর জন্য NID বা ছবি সম্বলিত পরিচয়পত্র থাকা বাধ্যতামূলক।<br>
+                    – যদি সীট মেলানো না হয়, তবে প্রবেশাধিকার বাতিল করার অধিকার সংরক্ষণ করে।<br>
+                </div>
+                <p>আপনার যাত্রা সুখকর ও নিরাপদ হোক—<br><b>বাংলাদেশ রেলওয়ে</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

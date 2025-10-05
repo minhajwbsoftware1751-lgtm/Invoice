@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .receipt {
+            background: #fff;
+            width: 300px;
+            border: black dashed 1px;
+            padding: 20px;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            margin: 4px 0;
+        }
+
+        p {
+            margin: 4px 0;
+            line-height: 0.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th,
+        td {
+            padding: 4px 0;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            text-align: left;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            text-align: center;
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            text-align: right;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: x-large;
+            padding-top: 5px;
+        }
+
+        .thankyou {
+            text-align: center;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        @media print {
+            @page {
+                size: 80mm 150mm;
+                margin: 0;
+            }
+
+            body {
+                background: #fff;
+                padding: 0;
+            }
+
+            body * {
+                visibility: hidden;
+                
+            }
+
+            .receipt,
+            .receipt * {
+                visibility: visible;
+                
+            }
+
+            .receipt {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 80mm;
+                margin: 0;
+                border: black dashed 1px;
+                box-shadow: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="receipt">
+        <div class="center">
+            <h2>SUPERMARKET</h2>
+            <div class="info">
+                Lorem ipsum 258 <br>
+                City Index · 02/025 <br>
+                Tel.: +8801309085965
+            </div>
+        </div>
+
+        <p>************************************************</p>
+        <p>************************************************</p>
+
+
+        <div class="row">
+            <span>Cashier</span>
+            <span>#3</span>
+        </div>
+
+        <div class="row">
+            <span>Manager</span>
+            <span>Minhaj</span>
+        </div>
+
+        <p>************************************************</p>
+        <p>************************************************</p>
+
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>1</td>
+                        <td>$9.20</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit</td>
+                        <td>1</td>
+                        <td>$19.20</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        <td>1</td>
+                        <td>$15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>1</td>
+                        <td>$15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>1</td>
+                        <td>$15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit</td>
+                        <td>1</td>
+                        <td>$19.20</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>1</td>
+                        <td>$15.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>************************************************</p>
+        <p>************************************************</p>
+
+        <table>
+            <tr>
+                <td class="total">Sub Total</td>
+                <td class="total">$107.60</td>
+            </tr>
+            <tr>
+                <td>CASH</td>
+                <td>$200.00</td>
+            </tr>
+            <tr>
+                <td>CHANGE</td>
+                <td>$92.40</td>
+            </tr>
+        </table>
+
+        <div>
+            <img style="width: 300px; height: 40px;"
+                src="https://static.vecteezy.com/system/resources/previews/005/449/913/non_2x/barcode-on-white-background-illustration-vector.jpg"
+                alt="alternatetext">
+        </div>
+
+        <div class="thankyou">
+            THANK YOU! <br>
+            Glad to see you again!
+        </div>
+    </div>
+</body>
+
+</html>
