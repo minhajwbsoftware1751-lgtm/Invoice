@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Report</title>
+    <style>
+        body {
+            font-family: "Arial", Helvetica, sans-serif;
+            color: #111;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 18px;
+            position: relative;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyOA4NPfNXbu5rv457AEBNDyrMo3-XWoEUIA&s') center/contain no-repeat;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 0;
+            background-size: 300px;
+        }
+
+        .container>* {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .logo {
+            width: 84px;
+            height: 84px;
+            flex: 0 0 84px;
+        }
+
+        .header .center {
+            flex: 1;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .clinic-name {
+            font-size: 28px;
+            color: #197b1a;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .clinic-name-bn {
+            font-size: 18px;
+            color: #27459a;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .clinic-info {
+            font-size: 15px;
+            color: #111;
+        }
+
+        .qr {
+            width: 100px;
+            height: 100px;
+            margin-left: 10px;
+            display: inline-block;
+            background: #fff;
+        }
+
+
+
+        .report-title {
+            text-align: center;
+            margin: 18px 0 14px 0;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: underline;
+        }
+
+        .table_div {
+            width: 98%;
+            border-collapse: collapse;
+            font-size: 13px;
+            border: 1px solid #545454;
+            margin-left: 12px;
+        }
+
+        .table_div td {
+            padding: 6px 4px;
+            border-bottom: 1px solid #252525;
+            font-weight: 700;
+        }
+
+        .table_div tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table_div td:first-child {
+            width: 30%;
+        }
+
+        .table_div td:nth-child(2) {
+            width: 20%;
+        }
+
+        .table_div td:nth-child(3) {
+            text-align: center;
+            width: 30%;
+        }
+
+
+        .blood_p {
+            font-size: medium;
+            font-weight: 700;
+        }
+
+
+        .tests {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        .tests thead th {
+            border: 2px solid #000;
+            padding: 8px 10px;
+            background: #fff;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .tests tbody td {
+            padding: 8px 10px;
+            vertical-align: top;
+        }
+
+        .section-title {
+            font-weight: 800;
+            padding: 8px 0;
+            font-size: 16px;
+        }
+
+        .lipid-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .lipid-table td {
+            border: 1px solid #bbb;
+            padding: 6px 8px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            gap: 8px;
+        }
+
+        .sign-block {
+            text-align: center;
+            width: 30%;
+            font-size: 12px;
+        }
+
+
+        .info {
+            border: 3px solid #000000;
+            padding: 4px 10px;
+            
+        }
+
+        .info .col {
+            flex: 1;
+            font-weight: 600;
+        }
+         .info .col2 {
+            flex: 1;
+            font-weight: 600;
+        }
+
+        .info .col.right {
+            text-align:right;
+        }
+
+        .info p {
+            margin: 6px 0;
+            color: #111;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5px;
+        }
+
+        .info p span:first-child {
+            flex: 0 0 120px;
+            text-align: left;
+            color: #333;
+        }
+
+        .info p span:last-child {
+            flex: 1;
+            text-align: left;
+            color: #111;
+        }
+
+
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .container::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyOA4NPfNXbu5rv457AEBNDyrMo3-XWoEUIA&s') center/300px no-repeat;
+                opacity: 0.1;
+                pointer-events: none;
+                z-index: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyOA4NPfNXbu5rv457AEBNDyrMo3-XWoEUIA&s"
+                    alt="logo" style="width:90%;height:100%;object-fit:contain">
+            </div>
+
+            <div class="center">
+                <div class="clinic-name">EASY TOUCH IT HOSPITAL DEMO</div>
+                <div class="clinic-name-bn">ইজি টাচ আইটি হাসপাতাল ডেমো</div>
+                <div class="clinic-info">
+                    Kha 15/2 Bapapipara, Bonshai Hotel Inside Khilkhet, Dhaka-1330. Bangladesh<br>
+                    01982607043
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="info" style="display:grid; grid-template-columns: 1.3fr 1.2fr auto; ">
+            <div class="col">
+                <p><span>Invoice No</span><span>:2509001</span></p>
+                <p><span>Patient Name</span><span>:Dr.Ibrahim Islam</span></p>
+                <p><span>Patient ID</span><span>:easytouchit</span></p>
+                <p><span>Sex</span><span>:Male</span></p>
+            </div>
+
+            <div class="col2" style="text-align:left;">
+                <p><span>Service Date</span><span>:03 September, 2025</span></p>
+                <p><span>Age</span><span>:0Y 0M 0D</span></p>
+                <p><span>Contact</span><span>:250900451</span></p>
+                <p><span>Print Date & Time</span><span>:19/08/2025 5:40 PM</span></p>
+            </div>
+
+            <div class="col right">
+                <div class="qr">
+                    <img src="https://docs.lightburnsoftware.com/legacy/img/QRCode/ExampleCode.png" alt="QR"
+                        style="width:100%;height:100%;">
+                </div>
+            </div>
+
+            <div style="grid-column: 1 / 4; font-weight: 600;">
+                <p><span>Ref Doctors</span><span>: Asst. Prof. Dr. SMA Allm, MBBS, MD (DMC), EDPM (UK), GOPF (USA), FIPM
+                        (India)</span></p>
+            </div>
+        </div>
+
+
+
+
+        <div class="report-title">BIOCHEMISTRY REPORT</div>
+
+        <table class="tests" role="table" aria-label="Test Results">
+            <thead>
+                <tr>
+                    <th style="width:30%; text-align: left;">Test</th>
+                    <th style="width:20%;">Result</th>
+                    <th style="width:30%;">Reference Value</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div>
+            <p class="blood_p">Blood Sugger:</p>
+
+            <table class="table_div">
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td>Random Plasma Glucose</td>
+                        <td>5.5 mmol/L</td>
+                        <td>&lt; 7.8 mmol/L</td>
+                    </tr>
+
+                    <tr>
+                        <td>Corresponding Urine Sugar</td>
+                        <td>nil</td>
+                        <td>NIL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <p class="blood_p"> Lipid Profile (Fasting) :</p>
+
+            <table class="table_div">
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td>Cholesterol (Total)</td>
+                        <td>140 mg/dl</td>
+                        <td>Normal: Less than 200 mg/dl<br>Borderline: 200-239 mg/dl<br>High:≥ 240mg/dl</td>
+                    </tr>
+
+                    <tr>
+                        <td>S. HDL Cholesterol</td>
+                        <td>30 mg/dl</td>
+                        <td>Men: &gt;35 mg/dl, Female: &gt;46 mg/dl</td>
+                    </tr>
+
+                    <tr>
+                        <td>S. LDL Cholesterol</td>
+                        <td>50 mg/dl</td>
+                        <td>Less than 150 mg/dl</td>
+                    </tr>
+
+                    <tr>
+                        <td>Serum Triglyceride Cholesterol</td>
+                        <td>150 mg/dl</td>
+                        <td>Normal: 40-160 mg/dl<br>Women: 35-135 mg/dl</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+        <div style="height: 200px;"></div>
+
+        <div class="footer">
+            <div class="sign-block">
+                <div style="font-size:12px;">Initiated By</div>
+                <div>Md Liyakot Dholl<br><span>Developer</span><br><span>Developer</span>
+                </div>
+            </div>
+
+            <div class="sign-block">
+                <div style="font-size:12px;">Verified By</div>
+                <div>Prof. Dr. Md. Dummy<br><span>MBBS,MCPS</span><br><span>MBBS,MCPS</span><br><span>MBBS,MCPS</span>
+                </div>
+            </div>
+
+            <div class="sign-block">
+                <div style="font-size:12px;">Finalized By</div>
+                <div>Prof. Dr. Md. Dummy<br><span>MBBS,MCPS</span><br><span>MBBS,MCPS</span><br><span>MBBS,MCPS</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
