@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masum Computer & Print Zone - Invoice</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 5px;
+            color: #000;
+        }
+
+        .invoice {
+            width: 750px;
+            margin: auto;
+            padding: 10px;
+            background: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        header .info h2 {
+            color: #000000;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header .info p {
+            margin: 2px 0;
+            font-size: 15px;
+            color: #333;
+        }
+
+        header img {
+            height: 70px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: 1000px;
+            margin: 10px auto;
+        }
+
+        .trip-container {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #000000;
+            padding: 10px;
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        .trip-container div {
+            flex: 1;
+
+        }
+
+        .trip-container div p {
+            margin: 5px 0;
+        }
+
+        .trip-container div:first-child {
+            margin-right: 20px;
+
+        }
+
+        .box {
+            width: 200px;
+            border: 1px solid #000000;
+            padding: 20px;
+            margin: 20px auto;
+
+        }
+
+        .box p {
+            margin: 8px 0;
+        }
+
+        .box strong {
+            font-size: 1.1em;
+        }
+
+
+        .passenger {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .passenger-left {
+            flex-direction: column;
+        }
+
+        .passenger-right {
+            flex-direction: column;
+        }
+
+
+        .passenger p {
+            margin: 5px 0;
+        }
+
+
+        .footer-info {
+            border-top: 3px solid #000000;
+            margin-top: 20px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .footer-info a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: large;
+        }
+
+        .custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .custom-list li::before {
+            content: "\f0a4";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #000000;
+
+        }
+
+
+
+
+        h3 {
+            text-align: center;
+            color: #0c820c;
+            font-size: 24px;
+        }
+
+        .terms {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px 20px;
+            border: 1px solid #20d110;
+            border-radius: 8px;
+            column-count: 2;
+            column-gap: 30px;
+        }
+
+        .terms ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .terms li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .fullterms {
+            border-top: 1px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice">
+        <header>
+            <div class="info">
+                <h2>Masum Computer & Print Zone</h2>
+                <p>Concrit Bhaban, (Near Sadias Kitchen), Shop No-03,</p>
+                <p>166/68 No College Road, Chawkbazar, Chittagong, Bangladesh</p>
+            </div>
+            <img src="images/logo.jpg" alt="Logo">
+        </header>
+
+        <div class="main-container">
+            <div class="trip-container">
+                <div class="trip-left">
+                    <p><strong>PNR :</strong> AANY5994BD</p>
+                    <p><strong>Coach :</strong> BUS-1 (COU-B)</p>
+                    <p><strong>Boarding :</strong> CHAWKBAZAR (Chatteshwari Road)</p>
+                    <p><strong>Booked On :</strong> 22-04-2025 15:51:55</p>
+                    <p><strong>Trip Name :</strong> CHATTOGRAM TO CUMILLA UNIVERSITY</p>
+                </div>
+                <div class="trip-right">
+                    <p><strong>Dropping :</strong> Your Exam Center</p>
+                    <p><strong>Departure :</strong> 2025-04-25 09:00</p>
+                    <p><strong>Arrival :</strong> 25-04-2025 14:00</p>
+                    <p><strong>Return :</strong> 2025-04-25 17:30</p>
+                    <p><strong>Booked By :</strong> BYDA</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <p><strong>Payment Details</strong></p>
+                <p>Ticket Price: BDT 800</p>
+                <p>Fee + Charge: BDT 2%</p>
+                <p><strong>Total Fee:</strong> BDT 800</p>
+            </div>
+        </div>
+
+
+
+        <div class="passenger">
+            <div class="passenger-left">
+                <p><strong>Passenger :</strong> Tanvir</p>
+                <p><strong>Mobile :</strong> 01882929217</p>
+            </div>
+            <div class="passenger-right">
+                <p><strong>Seat(s) :</strong> [A2]</p>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p>Powered by :<br> <a href="#">admissionbus.com</a></p>
+            <p>Email:<br><a href="#">printzone202@gmail.com</a> </p>
+            <p>Call us:<br><a>+880 1575690678</a> </p>
+            <img src="images/logo.jpg" alt="Logo" width="100" height="70">
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <div class="fullterms">
+            <h3>আমাদের শর্তাবলী</h3>
+            <div class="terms">
+                <ul class="custom-list">
+                    <li>টিকেটটি অবশ্যই প্রিন্ট করে আনতে হবে।</li>
+                    <li>যাত্রার ২৪-৪৮ ঘন্টা পূর্বে বাস নাম্বার, গাড়ির নাম ও নাম্বার ও সকল তথ্য মেসেজ করা হবে। তাই
+                        মোবাইল
+                        নাম্বারে সতর্কতা সঙ্গে দিবেন এবং সবসময় সচল রাখবেন।</li>
+                    <li>টিকেট ফেরতযোগ্য এবং হস্তান্তরযোগ্য নয়।</li>
+                    <li>যাত্রীকে ৩০ মিনিট পূর্বে বাসস্ট্যান্ডে উপস্থিত থাকতে হবে।</li>
+                    <li>যাত্রাকালে ধুমপান নিষিদ্ধ।</li>
+                    <li>যাত্রা কোনো প্রকার দুর্ঘটনাজনিত বীমা অন্তর্ভুক্ত নয়।</li>
+                    <li>যাত্রা ফিরতি ও সিটসংক্রান্ত বিষয়ে দিবে (শুধুমাত্র রাজশাহী বিশ্ববিদ্যালয় ক্ষেত্র)।</li>
+                    <li>কর্তৃপক্ষ মেঘনা পারাপারের বিতর্কিত যাত্রা স্থল পরিবর্তন করতে পারে এবং পরিবর্তনের খবর যাত্রার
+                        ২৪-৪৮
+                        ঘন্টা পূর্বে মেসেজ করে জানিয়ে দেয়া হবে।</li>
+                    <li>উল্লেখ্য মালামাল বহনের দায়ভার যাত্রীর, কোনোরূপ পরিস্থিতিতে আইনগতভাবে বাসিন্দা কে কর্তৃপক্ষ
+                        দায়বদ্ধ
+                        থাকবে না।</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
